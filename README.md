@@ -12,6 +12,7 @@ Follow the below steps to install it on Cluster:
     cd elasticsearch
     kubectl create -f statefulset.yaml
     kubectl create -f service.yaml
+    kubectl port-forward svc/elasticsearch 9200
 
 # 2. Install Kibana on Minikube Cluster:  
 
@@ -20,6 +21,7 @@ Follow the below steps to install it on Cluster:
     cd kibana
     kubectl create -f deployment.yaml
     kubectl create -f service.yaml
+    kubectl port-forward svc/kibana 8080
 
 # 3. Install Fluentd on Minikube Cluster:  
 
